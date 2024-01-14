@@ -1,3 +1,7 @@
+# Files and resources I wish to keep private
+*.pptx
+media/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
