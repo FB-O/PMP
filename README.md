@@ -4,7 +4,8 @@ PMP is a simple media player created with PySide, which serves mostly as a tutor
 
 ## GUI
 
-...
+<img width="523" alt="Image of Media Player GUI" src="https://github.com/FB-O/PMP/assets/66149212/7bc8993b-0089-4963-b50d-ec7084119673">
+
 
 ## Features
 
