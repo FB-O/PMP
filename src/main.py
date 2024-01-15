@@ -45,7 +45,7 @@ class MainWindow(QMainWindow):
         self.ui.pb_play.clicked.connect(self.play_video)
         self.ui.pb_play.setToolTip('Select media file.') 
         # Slider events
-        self.ui.slider_progressBar.sliderMoved.connect(self.set_media_position)
+        self.ui.slider_progressBar.sliderReleased.connect(self.set_media_position)
         
 
 
@@ -113,15 +113,12 @@ class MainWindow(QMainWindow):
     
     
     @Slot(int)
-    def set_media_position(self, handle_position: int):
+    def set_media_position(self):
         """
         Change the media position when the handle of the progress bar\
         jumps to a new position by click, or when it's dragged.
-        
-        Parameters:
-            handle_position: int
-                The position of the handle, expressed in milliseconds.
         """
+        handle_position = self.ui.slider_progressBar.sliderPosition()
         self.mediaplayer.setPosition(handle_position)
         
 

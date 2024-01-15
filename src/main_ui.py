@@ -19,8 +19,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
 from PySide6.QtMultimediaWidgets import QVideoWidget
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QMainWindow, QMenu, QMenuBar, QPushButton,
-    QSizePolicy, QSlider, QStatusBar, QVBoxLayout,
-    QWidget)
+    QSizePolicy, QStatusBar, QVBoxLayout, QWidget)
+
+from custom_widgets.slider import JumpSlider
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -66,7 +67,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.lbl_position)
 
-        self.slider_progressBar = QSlider(self.frame_bar)
+        self.slider_progressBar = JumpSlider(self.frame_bar)
         self.slider_progressBar.setObjectName(u"slider_progressBar")
         self.slider_progressBar.setMaximum(1000)
         self.slider_progressBar.setSingleStep(0)
